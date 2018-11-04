@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css?family=Baloo");
+
+div[id^="caja-"] {
+  margin: auto;
+	width: 120px;
+  height: 144px;
+  border-radius: 10px;
+  border: 2px#606060 solid;
+  /*display:inline-block;*/
+  float:left;
+  margin-top: 17px;
+  margin-left: 17px;
+  padding-left: 17px;
+}
+div#caja-1{
+  	background: #dfedd6;
+}
+div#caja-2{
+  	
+  background: #f7fade ;
+}
+div#caja-3{
+  background: #dfedd6;
+}
+div#caja-4{
+  background: #f7fade ;
+}
+p{
+  font-family: 'Baloo',cursive;
+  font-size: 36px;
+  font: bold;
+  text-align: left;
+  border-spacing: 1000px;
+  vertical-align: initial
+}
