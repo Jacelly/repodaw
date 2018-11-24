@@ -9,6 +9,7 @@ $(document).ready(function(){
 				$("div.tweets").html("");
 				var info;
 				var i = 0;
+				var cont = 0;
 				var contenido;
 				var resultado;
 				var datoAbuscar = $("#buscar_tweets").val();
@@ -18,7 +19,7 @@ $(document).ready(function(){
 					resultado = contenido.indexOf(datoAbuscar);
 					console.log(resultado);
 					if(datoAbuscar==""){
-						window.alert("Por favor, ingrese un dato a buscar");
+						window.alert("Valor invalido,ingrese de nuevo bien!");
 						return false;
 					}
 					else{
@@ -26,7 +27,7 @@ $(document).ready(function(){
 						$("#tweets").html(datoAbuscar);
 						var div_interno = '<div class="interno' + i +  '"></div>';
 						$("div.tweets").append(div_interno);
-						info = '<p>' + $(this).find('[nodeName="dc:creator"]').text() + ' dijo: </p>';
+						info = '<p>' + $(this).find('creator').text() + ' dijo: </p>';
 						$('.interno'+i).append(info);
 						info = '<p>' + contenido + '</p>';
 						$('.interno'+i).append(info);
@@ -34,9 +35,14 @@ $(document).ready(function(){
 						$('.interno'+i).append(info);
 						$('.interno'+i).append("______________________________________________________________________________________________________________________________________________________________________");
 						i = i + 1;
+						cont = cont + 1;
 						}
 					}
 				});
+				if(cont == 0){
+					window.alert("No existe esa informacion!");
+					return false;
+				}
 			}
 
 		});
@@ -44,6 +50,7 @@ $(document).ready(function(){
 	});
 
 	$('button.btn_limpiar').click(function(){
+		$('div#borrar').html("");
 		$("#buscar_tweets").val("");
 	});
 });
